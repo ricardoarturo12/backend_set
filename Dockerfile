@@ -6,6 +6,7 @@ WORKDIR /app
 
 # Instalar las dependencias del proyecto
 COPY package*.json ./
+RUN npm install @vue/cli-service
 RUN npm install
 
 # Copiar el resto de los archivos del proyecto
