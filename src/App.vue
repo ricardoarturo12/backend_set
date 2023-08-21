@@ -1,26 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
-
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+    <div id="app">
+      <ListaFacturas />
+      <br/>
+      <br/>
+      <br/>
+      <ListaRemisiones /> <!-- Actualiza el nombre del componente aquí -->
+    </div>
+  </template>
+  
+  <script>
+  import ListaFacturas from "./components/ListaFacturas.vue"; // Actualiza la importación aquí
+  import ListaRemisiones from "./components/ListaRemisiones.vue";
+  
+  export default {
+    components: {
+      ListaFacturas,
+      ListaRemisiones, // Y aquí también
+    },
+  };
+  </script>
+  
