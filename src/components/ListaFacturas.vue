@@ -89,6 +89,11 @@ export default {
   },
   async mounted() {
     await this.obtenerFacturas();
+
+    // Refrescar las facturas automáticamente cada 5 segundos
+    setInterval(async () => {
+      await this.obtenerFacturas();
+    }, 5000);
   },
 };
 </script>
